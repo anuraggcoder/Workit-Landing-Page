@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --align-text: center;
+  --general-padding: 16px;
+  --header-container-width: 343px;
+  --header-container-height: 195px;
+  --main-image-width: 320px;
+  --main-image-height: 184px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Manrope";
+}
+header {
+  background-color: #24053e;
+  padding: 0 var(--general-padding) 148px var(--general-padding);
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  left: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    calc(100vw + 125px) calc(100vh * 0.2 * 0.19) at top right,
+    #24053e,
+    #24053e 50%,
+    #fff 50%
+  );
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    calc(100vw + 125px) calc(100vh * 0.2 * 0.19) at top left,
+    #24053e,
+    #24053e 50%,
+    #fff 50%
+  );
+}
+
+nav {
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;
+}
+nav p {
+  color: #fff;
+  text-decoration: solid underline #44ffa1 3px;
+  text-underline-offset: 10px;
+}
+header .heading {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  height: var(--header-container-height);
+  width: var(--header-container-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container p {
+  font-family: "Fraunces";
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+a {
+  align-self: center;
+  text-decoration: none;
+  background-color: #44ffa1;
+  text-align: center;
+  height: 55px;
+  line-height: 55px;
+  color: #000;
+  font-weight: 700;
+}
+.heading a {
+  width: 133px;
+}
+
+main {
+  background-color: #fcf8ff;
+  padding: 200px var(--general-padding) 73px var(--general-padding);
+  position: relative;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: var(--main-image-width);
+  height: var(--main-image-height);
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -80px;
+  background-image: url(assets/images/image-hero.webp);
+  background-size: 100%;
+}
+.main-container {
+  display: grid;
+  gap: 3rem;
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Fraunces";
+  text-align: var(--align-text);
+}
+.number-circle {
+  border: 1px solid black;
+  height: 46px;
+  width: 48px;
+  align-self: center;
+  border-radius: 50%;
+  line-height: 2.8rem;
+  color: #24053e;
+  flex: 0 0 auto;
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.sub-heading {
+  font-family: "Fraunces";
+  font-size: 1.75rem;
+  color: #24053e;
+}
+.info-box p {
+  font-family: "Manrope";
+  line-height: 1.75rem;
+  color: #584d62;
+}
+
+.last-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 20rem var(--general-padding) 1rem var(--general-padding);
+  flex: 1 1 auto;
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.founder {
+  height: 17.56rem;
+  width: 17.56rem;
+  background-image: url(assets/images/image-founder.webp);
+  background-size: 100%;
+  position: absolute;
+  top: -225px;
+  align-self: center;
+}
+.intro-writeup {
+  color: #fff;
+  background-color: #24053e;
+  position: relative;
+  z-index: 1;
+  height: 375px;
+  width: 343px;
+  padding: 2rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.intro-writeup p {
+  line-height: 1.75rem;
+  text-align: center;
+}
+.intro-writeup .sub-heading {
+  color: #fff;
+  text-align: center;
+}
+.intro-writeup a {
+  width: 172px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+.footer-logo {
+  width: 95.76px;
+  height: 24.61px;
+  align-self: center;
+}
+.social-media {
+  display: flex;
+  justify-content: space-between;
+}
+.dark-logo {
+  width: 116px;
+  height: 102px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (width > 767px) {
+  * {
+    --header-container-width: 573px;
+    --header-container-height: 215px;
+    --main-image-width: 514px;
+    --main-image-height: 296px;
+    --general-padding: 39px;
+  }
+  .heading {
+    margin: 0 81px;
+    padding: 0 32px;
+  }
+  .container p {
+    margin-bottom: 0rem;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  main {
+    padding: 250px var(--general-padding) 73px var(--general-padding);
+  }
+  main::before {
+    top: -100px;
+  }
+  .main-container {
+    padding: 0 81px;
+  }
+  .info-box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .information {
+    text-align: start;
+  }
+  .founder {
+    align-self: stretch;
+    top: -150px;
+  }
+  .intro-writeup {
+    padding: 65px 65px;
+    width: 730px;
+    gap: 24px;
+  }
+  .intro-writeup .sub-heading {
+    font-size: 56px;
+    text-align: start;
+    line-height: 56px;
+  }
+  .intro-writeup p {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: start;
+  }
+  .intro-writeup a {
+    align-self: flex-start;
+  }
+}
+
+@media (width > 1439px) {
+  * {
+    --header-container-width: 635px;
+    --header-container-height: 258px;
+    --main-image-width: 767px;
+    --main-image-height: 441px;
+    --general-padding: 165px;
+  }
+  .container {
+    margin-bottom: 150px;
+  }
+  .container p {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  main {
+    padding: 400px var(--general-padding) 73px var(--general-padding);
+  }
+  main::before {
+    top: -200px;
+  }
+  .main-container {
+    padding: 0 40px;
+    gap: 3rem;
+    grid-auto-flow: column;
+  }
+  .info-box {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .information {
+    text-align: center;
+  }
+  .last-section {
+    gap: 7rem;
+  }
+  .founder {
+    height: 450px;
+    width: 450px;
+  }
+  .intro-writeup {
+    padding: 64px;
+    width: 730px;
+    align-self: flex-end;
+    gap: 24px;
+  }
+  .intro-writeup .sub-heading {
+    font-size: 56px;
+    text-align: start;
+    line-height: 64px;
+  }
+  .intro-writeup p {
+    font-size: 18px;
+    text-align: start;
+    line-height: 32px;
+  }
+}
